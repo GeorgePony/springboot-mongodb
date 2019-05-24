@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@192.168.31.60:1521/orcl
+    username: JSHIS
+    password: JSHIS
+  data:
+    mongodb:
+      uri: mongodb://admin:password@192.168.31.221:27017/admin
+mybatis:
+  type-aliases-package: com.originaltek.mongo.entity
+  mapper-locations: classpath:com/originaltek/mongo/mapper/*.xml
+  mapper:
+    mappers:
+    - tk.mybatis.springboot.util.MyMapper
+    not-empty: false
+    identity: ORACLE
